@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 68% 12%;
+    --primary-foreground: 45 60% 90%;
+    --secondary: 45 45% 94%;
+    --secondary-foreground: 217 68% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 42%;
+    --accent: 45 66% 47%;
+    --accent-foreground: 217 68% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 45 66% 47%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-navy-950 font-sans antialiased; }
+  ::selection { background: #c9a227; color: #060f1f; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #142a46; border-radius: 8px; }
+}
+
+@layer components {
+  .container-lux { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .eyebrow { @apply text-gold-500 font-semibold tracking-[0.28em] uppercase text-xs sm:text-sm; }
+  .h-display { @apply font-display font-semibold text-navy-950 leading-tight; }
+  .btn-gold { @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-navy-950 shadow-lux transition-all duration-300 hover:bg-gold-400 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2; }
+  .btn-outline-light { @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/80 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white hover:text-navy-950; }
+  .btn-navy { @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-lux transition-all duration-300 hover:bg-navy-800 hover:-translate-y-0.5; }
+  .btn-wa { @apply inline-flex items-center justify-center gap-2 rounded-full bg-wa px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-lux transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5; }
+  .gold-divider { @apply mx-auto mt-5 flex items-center justify-center gap-3; }
+  .input-lux { @apply w-full rounded-xl border border-navy-100 bg-white px-4 py-3 text-sm text-navy-950 placeholder-navy-300 shadow-sm transition focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-200; }
+  .label-lux { @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-navy-700; }
+}
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
+.reveal.revealed { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Image hover zoom utility */
+.zoom-img { @apply overflow-hidden; }
+.zoom-img img { @apply transition-transform duration-700 ease-out; }
+.zoom-img:hover img { transform: scale(1.08); }
+
+/* Thin gold line ornament */
+.ornament { display: inline-block; width: 56px; height: 2px; background: linear-gradient(90deg, transparent, #c9a227, transparent); }
+
+/* Article body typography */
+.article-body h2 { @apply font-display text-2xl sm:text-3xl font-semibold text-navy-950 mt-10 mb-4; }
+.article-body p { @apply text-navy-800/90 leading-8 mb-5 text-[1.05rem]; }
+.article-body ul { @apply list-disc pl-6 mb-6 space-y-2 text-navy-800/90 leading-7; }
+.article-body blockquote { @apply border-l-4 border-gold-500 bg-sand-50 px-6 py-4 my-8 font-display text-xl italic text-navy-800 rounded-r-xl; }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://koriragency.co.ke/sitemap.xml

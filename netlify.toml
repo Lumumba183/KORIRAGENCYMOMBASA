@@ -1,0 +1,34 @@
+# Korir Agency — Netlify configuration
+# Vite build: Netlify detects the framework automatically.
+# Per our deployment knowledge base: keep Netlify UI build settings BLANK
+# (Build command / Publish directory / Base directory) so commandOrigin = config.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback — React Router handles all client-side routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Long-cache hashed assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

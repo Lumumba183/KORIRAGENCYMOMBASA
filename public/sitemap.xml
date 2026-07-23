@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://koriragency.co.ke/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://koriragency.co.ke/about</loc><priority>0.8</priority></url>
+  <url><loc>https://koriragency.co.ke/services</loc><priority>0.9</priority></url>
+  <url><loc>https://koriragency.co.ke/properties</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://koriragency.co.ke/holiday-villas</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://koriragency.co.ke/car-hire</loc><priority>0.8</priority></url>
+  <url><loc>https://koriragency.co.ke/tours-safaris</loc><priority>0.8</priority></url>
+  <url><loc>https://koriragency.co.ke/property-management</loc><priority>0.8</priority></url>
+  <url><loc>https://koriragency.co.ke/gallery</loc><priority>0.6</priority></url>
+  <url><loc>https://koriragency.co.ke/testimonials</loc><priority>0.6</priority></url>
+  <url><loc>https://koriragency.co.ke/blog</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://koriragency.co.ke/blog/diani-beach-complete-guide-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://koriragency.co.ke/blog/coastal-kenya-property-investment-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://koriragency.co.ke/blog/tsavo-day-safari-from-diani</loc><priority>0.7</priority></url>
+  <url><loc>https://koriragency.co.ke/blog/sgr-transfers-nairobi-to-south-coast</loc><priority>0.7</priority></url>
+  <url><loc>https://koriragency.co.ke/blog/hidden-gems-south-coast-kenya</loc><priority>0.7</priority></url>
+  <url><loc>https://koriragency.co.ke/contact</loc><priority>0.9</priority></url>
+</urlset>
